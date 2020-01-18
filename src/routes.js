@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const routes = Router();
 
-const DevController = require('./src/controllers/devController');
-const SearchController = require('./src/controllers/searchController');
+const DevController = require('./controllers/devController');
+const SearchController = require('./controllers/searchController');
 
 routes.get('/devs', DevController.index);
 routes.post('/devs', DevController.create);

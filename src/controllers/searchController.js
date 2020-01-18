@@ -4,7 +4,6 @@ const parseStringToArray = require('../utils/parseStringToArray');
 class SearchController {
   async index(req, res) {
     const { latitude, longitude, techs } = req.query
-
     const arrayTechs = parseStringToArray(techs);
 
     const devs = await Dev.find({
@@ -21,7 +20,6 @@ class SearchController {
         }
       }
     })
-
     return res.json(devs);
   }
 }
